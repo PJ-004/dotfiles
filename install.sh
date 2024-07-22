@@ -14,3 +14,10 @@ sudo make clean install
 echo "startx" >> ~/.bash_profile
 touch ~/.xinitrc
 echo "exec dwm" >> ~/.xinitrc
+
+mv Wallpapers ~/Pictures
+mv dwm ~/.dwm
+mv st ~/.dwm
+mv dmenu ~/.dwm
+mv autostart.sh ~/.dwm
+mv dwmbar ~/.dwm
