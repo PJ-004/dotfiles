@@ -12,4 +12,5 @@ cd ../dmenu
 sudo make clean install
 
 echo "startx" >> ~/.bash_profile
-mv .xinitrc ~/
+touch ~/.xinitrc
+echo "exec dwm" >> ~/.xinitrc
