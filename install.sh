@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -S xorg-server xorg-xinit xorg-xsetroot libx11 libxft libxinerama webkit2gtk
+sudo pacman -S xorg-server xorg-xinit xorg-xsetroot libx11 libxft libxinerama webkit2gtk ttf-fira-code
 
 cd dwm
 sudo make clean install
@@ -10,3 +10,6 @@ sudo make clean install
 
 cd ../dmenu
 sudo make clean install
+
+echo "startx" >> ~/.bash_profile
+mv .xinitrc ~/
