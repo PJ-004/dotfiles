@@ -1,0 +1,29 @@
+#! /bin/bash
+# This is my dwm statusbar script.
+# It gives the RAM, Battery Percentage, Date, and Time (in that order)
+# By default dwm doesn't give any information, it only shows the version number
+# I haven't tried this script with any wm other than dwm, but it could possibly work with it if your statusbar uses xsetroot
+
+#The power() function determines the battery percentage
+power()
+{
+        if [ -f /sys/class/power_supply/BAT0/status ]; then
+		STAT=$(cat /sys/class/power_supply/BAT0/status)
+		PWR=$(cat /sys/class/power_supply/BAT0/capacity)
+		echo -e " | $PWR% ($STAT)"
+        else
+                echo -e ""
+        fi
+}
+
+RAM()
+{
+        RAM=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
+        echo -e "$RAM"
+}
+
+#This while loop updates the statusbar in dwm
+while true; do
+        xsetroot -name "| $(RAM)$(power) | $(date '+%A, %B %d %Y') | $(date +%H:%M) |"
+        sleep 1s                #The bar updates every second (without this it would constantly update, taking up resources)
+done &
