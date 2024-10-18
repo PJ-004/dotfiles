@@ -1,7 +1,9 @@
 # dotfiles
 My dotfiles that I use on my Linux machine. Not much interesting here, just barely patched dwm. I don't really edit these dotfiles that much if I'm being honest
 
-![2024-07-22-045811_1920x1080_scrot](https://github.com/user-attachments/assets/89a3df9f-b1c6-4898-8c09-34299ac37670)
+## Screenshots
+![2024-10-17-152932_1920x1080_scrot](https://github.com/user-attachments/assets/7afb3599-306e-47c9-bad3-c72f81f343b0)
+![2024-10-17-153303_1920x1080_scrot](https://github.com/user-attachments/assets/59a4c28f-c5f2-430a-a01a-d31036595935)
 
 ## Using install.sh
 The install script only works with Arch and Arch based distros with no login manager. You can use `startx` on the terminal to launch dwm, no login manager has been configured.
